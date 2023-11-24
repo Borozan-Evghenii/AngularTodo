@@ -54,7 +54,7 @@ import {FormsModule} from "@angular/forms";
         <ng-template #elseBlock >items</ng-template>
       </h2>
         <ul>
-          <li *ngFor="let i of items; trackBy :">
+          <li *ngFor="let i of items">
             <app-item (remove)="remove(i)" [item]="i" ></app-item>
           </li>
         </ul>
