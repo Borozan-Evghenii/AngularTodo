@@ -2,7 +2,6 @@ import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {NzInputModule} from "ng-zorro-antd/input";
-import {NzWaveModule} from "ng-zorro-antd/core/wave";
 import {NzButtonModule} from "ng-zorro-antd/button";
 import {Item} from "./item/Item";
 import {ItemComponent} from "./item/item.component";
@@ -13,7 +12,16 @@ import {FormsModule} from "@angular/forms";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NzInputModule, NzButtonModule, NzWaveModule, NzButtonModule, ItemComponent, NzSpaceModule, NzRadioModule, FormsModule],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    NzInputModule,
+    NzButtonModule,
+    NzButtonModule,
+    ItemComponent,
+    NzSpaceModule,
+    NzRadioModule,
+    FormsModule],
   template: `
   <div class="container">
       <h1>My To Do List</h1>
@@ -46,7 +54,7 @@ import {FormsModule} from "@angular/forms";
         <ng-template #elseBlock >items</ng-template>
       </h2>
         <ul>
-          <li  *ngFor="let i of items">
+          <li *ngFor="let i of items; trackBy :">
             <app-item (remove)="remove(i)" [item]="i" ></app-item>
           </li>
         </ul>

@@ -3,3 +3,13 @@ ul{
   flex-direction: column;
   gap: 10px;
 }
+
+.active{
+  background-color: #333;
+  color: #fff;
+}
+
+.border-red{
+  border: 1px solid red;
+}
+

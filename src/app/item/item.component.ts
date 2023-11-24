@@ -13,12 +13,10 @@ import {NzCheckboxModule} from "ng-zorro-antd/checkbox";
   imports: [CommonModule, NzWaveModule, NzButtonModule, NzIconModule, NzSpaceModule, NzCheckboxModule],
   template: `
     <div class="item">
-
         <label
           nz-checkbox
           [nzChecked]="item.done"
           (change)="item.done = !item.done"
-
         >{{item.description}}</label>
 
       <div

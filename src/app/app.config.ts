@@ -12,5 +12,12 @@ import { FormsModule } from '@angular/forms';
 registerLocaleData(en);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimations(), provideHttpClient(withFetch()), provideNzI18n(en_US), importProvidersFrom(FormsModule), importProvidersFrom(HttpClientModule), provideAnimations()]
+  providers: [
+    provideRouter(routes),
+    provideAnimations(),
+    provideHttpClient(withFetch()),
+    provideNzI18n(en_US),
+    importProvidersFrom(FormsModule),
+    importProvidersFrom(HttpClientModule),
+    provideAnimations()]
 };
